@@ -421,7 +421,7 @@ a:hover {
 
 .navbar-b.navbar-trans .nav-link,
 .navbar-b.navbar-reduce .nav-link {
-  color: #fff;
+  color: #252522;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -476,13 +476,18 @@ a:hover {
 
 .navbar-b.navbar-reduce {
   transition: all .5s ease-in-out;
-  background-color: #fff;
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 .navbar-b.navbar-reduce .nav-link {
-  color: #0078ff;
+  color: #fff;
 }
 
 .navbar-b.navbar-reduce .nav-link:before {
@@ -1263,4 +1268,8 @@ footer .credits a {
   .back-to-top {
     bottom: 15px;
   }
+}
+
+.hoverMe:hover{
+  cursor: pointer;
 }
