@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is the backend for My Personal dev portfolio ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harsh9871/Portfolio.git"
+  },
+  "keywords": [
+    "Dev Portfolio",
+    "Portfolio"
+  ],
+  "author": "Harsh Raithatha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harsh9871/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Harsh9871/Portfolio#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
