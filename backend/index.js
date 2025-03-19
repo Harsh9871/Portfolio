@@ -2,8 +2,10 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 5001
-app.use(express.json())
+const connectDB = require('./db/db.js')
 
+app.use(express.json())
+connectDB();
 // @desc    project apis
 app.use('/api/projects', require('./router/projectsRouter.js'))
 
