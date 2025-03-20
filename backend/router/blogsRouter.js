@@ -1,6 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const {
+    validateBlog,
+    validateBlogByBlog,
+    validateBlogById
+} = require('../validation/blogValidator.js');
+const {
     getAllBlogs,
     addNewBlog,
     getSingleBlog,
@@ -9,10 +14,10 @@ const {
 } = require('../controller/blogsController.js');
 
 router.get('/', getAllBlogs);
-router.post('/', addNewBlog);
-router.get('/:id', getSingleBlog);
-router.put('/:id', updateBlog);
-router.delete('/:id', deleteBlog);
+router.post('/',validateBlog, addNewBlog);
+router.get('/:blog',validateBlogByBlog, getSingleBlog);
+router.put('/:id',validateBlogById, updateBlog);
+router.delete('/:id',validateBlogById, deleteBlog);
 
 
 module.exports = router;

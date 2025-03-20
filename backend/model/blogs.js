@@ -16,16 +16,8 @@ const blogSchema = new mongoose.Schema({
         required: true,
     },
     otherBlogs: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Blog',
-        validate: {
-            validator: async function (value) {
-                if (!value.length) return true; // Allow empty array
-                const count = await mongoose.model('Blog').countDocuments({ _id: { $in: value } });
-                return count === value.length;
-            },
-            message: 'One or more Blog IDs in otherBlogs are invalid.'
-        }
+        type: [String],
+        required: true,
     }
 }, { timestamps: true });
 
