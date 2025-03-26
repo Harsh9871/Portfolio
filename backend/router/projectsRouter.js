@@ -11,12 +11,12 @@ const {
     validateCreateProject,
     validateProjectById,
     validateProjectBySlug
-} = require('../validation/projectValidation.js');
+} = require('../validation/projectValidator.js');
 router.get('/', getAllProjects);
-router.post('/', validateCreateProject,createProject);
-router.get('/:slug',validateProjectBySlug, getProjectBySlug);
-router.put('/:id', validateProjectById, updateProject);
-router.delete('/:id', validateProjectById ,deleteProject);
+router.post('/',  validateCreateProject, createProject);
+router.get('/:slug', validateProjectBySlug, getProjectBySlug);
+router.put('/:id',  validateProjectById, updateProject);
+router.delete('/:id',  validateProjectById, deleteProject);
 
 
 module.exports = router;

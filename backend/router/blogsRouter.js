@@ -12,11 +12,10 @@ const {
     updateBlog,
     deleteBlog
 } = require('../controller/blogsController.js');
-
 router.get('/', getAllBlogs);
 router.post('/',validateBlog, addNewBlog);
 router.get('/:blog',validateBlogByBlog, getSingleBlog);
-router.put('/:id',validateBlogById, updateBlog);
+router.put('/:id' ,validateBlogById, updateBlog);
 router.delete('/:id',validateBlogById, deleteBlog);
 
 
